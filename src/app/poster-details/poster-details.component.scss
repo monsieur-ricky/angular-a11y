@@ -1,0 +1,30 @@
+.product {
+  position: relative;
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 2rem;
+
+    &__cover {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+
+      img {
+        object-fit: cover;
+        border-radius: 1rem;
+      }
+    }
+  }
+
+  &__back-link {
+    margin-top: 2rem;
+
+    &::before {
+      content: '<';
+      display: inline-block;
+      margin-right: 0.1rem;
+    }
+  }
+}

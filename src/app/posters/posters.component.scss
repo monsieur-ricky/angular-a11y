@@ -1,0 +1,51 @@
+.posters {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+
+    &__poster {
+      border-radius: 1rem;
+      padding: 1.5rem;
+      background: var(--secondary-color);
+      position: relative;
+
+      .cover {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        position: relative;
+        transition: transform 0.3s ease-in-out;
+
+        img {
+          width: 100%;
+          object-fit: cover;
+          border-radius: 0.85rem;
+        }
+      }
+
+      .price {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: var(--primary-color);
+        margin-top: 1rem;
+      }
+
+      .heading-4 {
+        margin: 1rem 0;
+        color: var(--text-color);
+      }
+
+      .description {
+        margin-top: 1rem;
+        font-size: 0.8rem;
+        color: var(--text-color);
+      }
+
+      &:hover {
+        .cover {
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+<div class="section posters">
+  <div class="heading-1">
+    Welcome to The Poster Shop!
+
+    <div class="subtitle">Your one-stop shop for all your poster needs.</div>
+  </div>
+
+  <div class="section">
+    <div class="heading-2">Featured Posters</div>
+
+    <div class="posters__list">
+      @for (poster of productsResource.value(); track poster.id) {
+      <div class="article posters__list__poster">
+        <div class="cover">
+          <img ngSrc="{{ poster.imageUrl }}" fill priority />
+        </div>
+
+        <div class="heading-3">
+          {{ poster.price | currency : 'EUR' }}
+        </div>
+
+        <div class="heading-4">{{ poster.name }}</div>
+        <div class="description">{{ poster.description }}</div>
+
+        <div class="actions">
+          <a [routerLink]="['/posters', poster.id]">
+            <i class="fa-solid fa-circle-info"></i>
+          </a>
+
+          <div class="add-to-cart-btn" (click)="addToCart(poster)">
+            <i class="fa-solid fa-cart-plus"></i>
+          </div>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+</div>

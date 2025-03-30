@@ -1,1 +1,185 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --primary-color: #409cff;
+  --primary-color-dark: #007bff;
+  --secondary-color: #eeeeee;
+  --heading-color: #343a40;
+  --text-color: #979797;
+  --background-color: #f8f9fa;
+
+  --green-color: #28a745;
+  --red-color: #dc3545;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+}
+
+a {
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+
+  &:hover {
+    color: var(--primary-color);
+  }
+}
+
+.heading-1,
+.heading-2,
+.heading-3,
+.heading-4,
+.heading-5,
+.heading-6 {
+  font-weight: 500;
+  color: var(--primary-color);
+}
+
+.heading-1 {
+  font-size: 2rem;
+  margin: 1.5rem 0;
+
+  .subtitle {
+    display: block;
+    font-size: 1.2rem;
+    color: var(--text-color);
+  }
+}
+
+.heading-2 {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+
+.heading-3 {
+  font-size: 1.3rem;
+  margin: 1rem 0;
+}
+
+.heading-4 {
+  font-size: 1rem;
+  margin: 1rem 0;
+}
+
+.heading-5 {
+  font-size: 0.85rem;
+  margin: 1rem 0;
+}
+
+.heading-6 {
+  font-size: 0.67em;
+  margin: 2.33em 0;
+}
+
+.main {
+  width: 100%;
+  min-height: calc(100vh - 240px);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  box-sizing: border-box;
+
+  @media (max-width: 1240px) {
+    padding: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    padding: 1rem;
+  }
+}
+
+button {
+  cursor: pointer;
+  background: #ffffff;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  height: 45px;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.85rem;
+  transition: all 0.3s ease-in-out;
+  font-size: 1rem;
+
+  &:hover {
+    background: var(--primary-color);
+    color: #ffffff;
+    border: 1px solid var(--primary-color);
+  }
+
+  &.danger {
+    color: var(--red-color);
+    border: 1px solid var(--red-color);
+
+    &:hover {
+      background: var(--red-color);
+      color: #ffffff;
+      border: 1px solid var(--red-color);
+    }
+  }
+}
+
+.actions {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 1rem;
+
+  a,
+  select,
+  .add-to-cart-btn {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    padding: 0 1rem;
+    text-align: center;
+    border-radius: 0.85rem;
+    transition: all 0.3s ease-in-out;
+    height: 55px;
+  }
+
+  select {
+    font-size: 1rem;
+    text-align: left;
+    appearance: none;
+    cursor: pointer;
+    background: #ffffff
+      url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>')
+      no-repeat right 0.75rem center;
+    background-size: 1.2rem;
+  }
+
+  a,
+  .add-to-cart-btn {
+    font-size: 2rem;
+
+    &:hover {
+      color: #ffffff;
+    }
+  }
+
+  a {
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    text-decoration: none;
+
+    &:hover {
+      background: var(--primary-color);
+    }
+  }
+
+  .add-to-cart-btn {
+    color: var(--green-color);
+    border: 1px solid var(--green-color);
+    cursor: pointer;
+
+    &:hover {
+      background: var(--green-color);
+    }
+  }
+}

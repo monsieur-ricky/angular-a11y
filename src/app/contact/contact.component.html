@@ -1,0 +1,71 @@
+<div class="section contact">
+  <div class="heading-1">
+    Want to get in touch?
+
+    <div class="subtitle">We'd love to hear from you!</div>
+  </div>
+
+  <div class="section contact__general-info">
+    <div class="heading-2">General Contacts</div>
+
+    <div class="address contact__general-info__address">
+      <div class="item">
+        <i class="fa-solid fa-location-dot"></i>
+        <span>123 Poster Steet, Art City, ArtistLand</span>
+      </div>
+
+      <div class="item">
+        <i class="fa-solid fa-phone"></i>
+        <span> +000 123-456-7890 </span>
+      </div>
+
+      <div class="item">
+        <i class="fa-solid fa-envelope"></i>
+        <span> hello(at)thetshirtshop.demo </span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section contact__form">
+    <div class="heading-2">Contact Form</div>
+
+    <form #form (ngSubmit)="onSubmit()">
+      <div class="form-item">
+        <input
+          type="text"
+          id="name"
+          name="name"
+          required
+          placeholder="Name"
+          [(ngModel)]="name"
+        />
+      </div>
+
+      <div class="form-item">
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          placeholder="Email"
+          [(ngModel)]="email"
+        />
+      </div>
+
+      <div class="form-item">
+        <textarea
+          id="message"
+          name="message"
+          rows="5"
+          required
+          placeholder="Message"
+          [(ngModel)]="message"
+        ></textarea>
+      </div>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</div>
+
+<app-dialog message="Thanks for your message!" [(show)]="showDialog" />

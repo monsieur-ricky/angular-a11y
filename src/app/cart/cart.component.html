@@ -1,0 +1,50 @@
+<div class="section cart">
+  <div class="heading-1">Your Cart</div>
+
+  <div class="section">
+    <div class="heading-2">Selected Posters</div>
+
+    @if (cart().items.length > 0) {
+    <table>
+      <thead>
+        <tr>
+          <th>Poster</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Total</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (item of cart().items; track item.poster.id) {
+        <tr>
+          <td>{{ item.poster.name }}</td>
+          <td>{{ item.poster.price | currency : 'EUR' }}</td>
+          <td>{{ item.quantity }}</td>
+          <td>{{ item.quantity * item.poster.price | currency : 'EUR' }}</td>
+          <td [style.text-align]="'right'">
+            <button class="danger" (click)="onDeleteItem(item.poster)">
+              Remove
+            </button>
+          </td>
+        </tr>
+
+        }
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="3">Total</td>
+          <td>{{ cart().total | currency : 'EUR' }}</td>
+          <td></td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <button class="btn btn-primary" (click)="onBuyItems()">Buy Items</button>
+    } @else {
+    <p>Your cart is empty.</p>
+    }
+  </div>
+</div>
+
+<app-dialog message="Thanks for your order!" [(show)]="showDialog" />

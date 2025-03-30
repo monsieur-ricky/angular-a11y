@@ -1,0 +1,37 @@
+<div class="article product">
+  <div class="heading-1">
+    {{ name() }}
+  </div>
+
+  <div class="product__container">
+    <div class="product__container__cover">
+      <img fill priority [ngSrc]="imageUrl()" />
+    </div>
+
+    <div class="product__container__details">
+      <div class="heading-2">{{ price() | currency : 'EUR' }}</div>
+
+      <div>{{ description() }}</div>
+
+      <div class="actions">
+        <select name="pets" [(ngModel)]="selectedSize">
+          <option [value]="undefined" selected>Please choose size</option>
+
+          @for (size of sizes() ; track size) {
+          <option [value]="size">{{ size }}</option>
+          }
+        </select>
+
+        <div class="add-to-cart-btn" (click)="onAddToCart()">
+          <i class="fa-solid fa-cart-plus"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="product__back-link">
+    <a [routerLink]="['/']">Back to Home Page</a>
+  </div>
+</div>
+
+<app-dialog [message]="dialogMessage()" [(show)]="showDialog" />

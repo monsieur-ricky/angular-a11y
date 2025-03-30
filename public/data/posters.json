@@ -1,0 +1,76 @@
+[
+    {
+        "id": 1,
+        "name": "Minimalist Typography Poster",
+        "description": "Clean, minimalist typography design for modern spaces. Features inspirational quote in elegant sans-serif font on matte paper.",
+        "price": 18.99,
+        "imageUrl": "https://picsum.photos/seed/typography3/800/1000",
+        "sizes": [
+            "S",
+            "M",
+            "L"
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Botanical Illustration Poster",
+        "description": "Detailed botanical illustration featuring exotic plants and flowers. Scientific accuracy meets artistic beauty in this museum-quality print.",
+        "price": 22.99,
+        "imageUrl": "https://picsum.photos/seed/botanical5/800/1000",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XXL"
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Motivational Quote Poster",
+        "description": "Inspirational quote poster to keep you motivated every day. Bold typography on minimalist background creates strong visual impact.",
+        "price": 17.99,
+        "imageUrl": "https://picsum.photos/seed/quote7/800/1000",
+        "sizes": [
+            "S",
+            "M",
+            "L"
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Cityscape Poster",
+        "description": "Urban cityscape poster featuring iconic skylines. Dramatic perspective captures the energy and architecture of metropolitan life.",
+        "price": 23.99,
+        "imageUrl": "https://picsum.photos/seed/city8/800/1000",
+        "sizes": [
+            "M",
+            "L",
+            "XL"
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Watercolor Ocean Poster",
+        "description": "Delicate watercolor painting of ocean waves and coastal scenery. Soothing blues and aquamarine tones create a tranquil atmosphere.",
+        "price": 25.99,
+        "imageUrl": "https://picsum.photos/seed/ocean11/800/1000",
+        "sizes": [
+            "S",
+            "M",
+            "L"
+        ]
+    },
+    {
+        "id": 6,
+        "name": "Vintage Travel Poster",
+        "description": "Classic travel poster inspired by mid-century tourism advertisements. Features stylized destination artwork with retro typography.",
+        "price": 23.99,
+        "imageUrl": "https://picsum.photos/seed/travel12/800/1000",
+        "sizes": [
+            "M",
+            "L",
+            "XL",
+            "XXL"
+        ]
+    }
+]

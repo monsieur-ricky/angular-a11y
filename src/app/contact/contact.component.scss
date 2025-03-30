@@ -1,0 +1,58 @@
+.contact {
+  &__general-info {
+    text-align: center;
+
+    &__address {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 2rem;
+
+      .item {
+        display: grid;
+        justify-content: center;
+        background-color: var(--secondary-color);
+        border-radius: 1rem;
+        padding: 1.5rem;
+
+        svg {
+          width: 100%;
+          color: var(--primary-color);
+          font-size: 2rem;
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+
+  &__form {
+    text-align: center;
+    margin-top: 5rem;
+
+    form {
+      display: grid;
+      justify-content: center;
+      width: 100%;
+
+      .form-item {
+        width: 380px;
+
+        input,
+        textarea {
+          font-size: 1rem;
+          box-sizing: border-box;
+          width: 100%;
+          padding: 1rem;
+          border-radius: 1rem;
+          border: none;
+          background-color: var(--secondary-color);
+          color: var(--text-color);
+          margin-bottom: 1rem;
+        }
+      }
+
+      button {
+        width: 100%;
+      }
+    }
+  }
+}
