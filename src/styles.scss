@@ -30,53 +30,53 @@ a {
   }
 }
 
-.heading-1,
-.heading-2,
-.heading-3,
-.heading-4,
-.heading-5,
-.heading-6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 500;
   color: var(--primary-color);
 }
 
-.heading-1 {
+h1 {
   font-size: 2rem;
   margin: 1.5rem 0;
 
-  .subtitle {
+  small {
     display: block;
     font-size: 1.2rem;
     color: var(--text-color);
   }
 }
 
-.heading-2 {
+h2 {
   font-size: 1.5rem;
   margin: 1rem 0;
 }
 
-.heading-3 {
+h3 {
   font-size: 1.3rem;
   margin: 1rem 0;
 }
 
-.heading-4 {
+h4 {
   font-size: 1rem;
   margin: 1rem 0;
 }
 
-.heading-5 {
+h5 {
   font-size: 0.85rem;
   margin: 1rem 0;
 }
 
-.heading-6 {
+h6 {
   font-size: 0.67em;
   margin: 2.33em 0;
 }
 
-.main {
+main {
   width: 100%;
   min-height: calc(100vh - 240px);
   max-width: 1200px;
@@ -141,6 +141,12 @@ button {
     border-radius: 0.85rem;
     transition: all 0.3s ease-in-out;
     height: 55px;
+
+    &:has(svg) {
+      svg {
+        margin-right: 5px;
+      }
+    }
   }
 
   .select-size {
@@ -166,8 +172,6 @@ button {
 
   a,
   .add-to-cart-btn {
-    font-size: 2rem;
-
     &:hover {
       color: #ffffff;
     }

@@ -6,10 +6,10 @@ import { RouterModule } from '@angular/router';
   selector: 'app-header',
   imports: [RouterModule],
   template: `
-    <div class="header">
-      <div class="logo">The Poster Shop</div>
+    <header>
+      <span class="logo">The Poster Shop</span>
 
-      <div class="navigation">
+      <nav>
         <ul>
           <li>
             <a
@@ -30,11 +30,11 @@ import { RouterModule } from '@angular/router';
             </a>
           </li>
         </ul>
-      </div>
-    </div>
+      </nav>
+    </header>
   `,
   styles: `
-    .header {
+    header {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -46,7 +46,7 @@ import { RouterModule } from '@angular/router';
         font-size: 1.5rem;
       }
 
-      .navigation {
+      nav {
         ul {
           list-style: none;
           padding: 0;

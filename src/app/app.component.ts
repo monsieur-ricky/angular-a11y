@@ -7,17 +7,13 @@ import { FooterComponent } from './shared/ui/footer/footer.component';
   selector: 'app-root',
   imports: [RouterOutlet, HeaderComponent, FooterComponent],
   template: `
-    <div class="header">
-      <app-header />
-    </div>
+    <app-header />
 
-    <div class="main">
+    <main>
       <router-outlet />
-    </div>
+    </main>
 
-    <div class="footer">
-      <app-footer />
-    </div>
+    <app-footer />
   `,
   styles: []
 })

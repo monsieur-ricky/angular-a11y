@@ -1,40 +1,43 @@
-<div class="section posters">
-  <div class="heading-1">
+<section class="posters">
+  <h1>
     Welcome to The Poster Shop!
 
-    <div class="subtitle">Your one-stop shop for all your poster needs.</div>
-  </div>
+    <small> Your one-stop shop for all your poster needs. </small>
+  </h1>
 
-  <div class="section">
-    <div class="heading-2">Featured Posters</div>
+  <section>
+    <h2>Featured Posters</h2>
 
     <div class="posters__list">
       @for (poster of productsResource.value(); track poster.id) {
-      <div class="article posters__list__poster">
+      <article class="posters__list__poster">
         <div class="cover">
           <img fill priority [ngSrc]="poster.imageUrl" />
         </div>
 
-        <div class="heading-3">
+        <h3>
           {{ poster.price | currency : 'EUR' }}
-        </div>
+        </h3>
 
-        <div class="heading-4">{{ poster.name }}</div>
-        <div class="description">{{ poster.description }}</div>
+        <h4>{{ poster.name }}</h4>
+
+        <p class="description">{{ poster.description }}</p>
 
         <div class="actions">
           <a [routerLink]="['/posters', poster.id]">
             <i class="fa-solid fa-circle-info"></i>
+            See Details
           </a>
 
-          <div class="add-to-cart-btn" (click)="addToCart(poster)">
+          <button class="add-to-cart-btn" (click)="addToCart(poster)">
             <i class="fa-solid fa-cart-plus"></i>
-          </div>
+            Add to Cart
+          </button>
         </div>
-      </div>
+      </article>
       }
     </div>
-  </div>
-</div>
+  </section>
+</section>
 
 <app-dialog [message]="dialogMessage()" [(show)]="showDialog" />

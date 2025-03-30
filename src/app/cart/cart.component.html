@@ -1,8 +1,8 @@
-<div class="section cart">
-  <div class="heading-1">Your Cart</div>
+<section class="cart">
+  <h1>Your Cart</h1>
 
-  <div class="section">
-    <div class="heading-2">Selected Posters</div>
+  <section>
+    <h2>Selected Posters</h2>
 
     @if (cart().items.length > 0) {
     <table>
@@ -44,7 +44,7 @@
     } @else {
     <p>Your cart is empty.</p>
     }
-  </div>
-</div>
+  </section>
+</section>
 
 <app-dialog message="Thanks for your order!" [(show)]="showDialog" />

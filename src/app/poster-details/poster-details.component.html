@@ -1,17 +1,17 @@
-<div class="article product">
-  <div class="heading-1">
+<article class="product">
+  <h1>
     {{ name() }}
-  </div>
+  </h1>
 
   <div class="product__container">
     <div class="product__container__cover">
       <img fill priority [ngSrc]="imageUrl()" />
     </div>
 
-    <div class="product__container__details">
-      <div class="heading-2">{{ price() | currency : 'EUR' }}</div>
+    <article class="product__container__details">
+      <h2>{{ price() | currency : 'EUR' }}</h2>
 
-      <div>{{ description() }}</div>
+      <p>{{ description() }}</p>
 
       <div class="actions">
         <div class="select-size">
@@ -26,16 +26,17 @@
           </select>
         </div>
 
-        <div class="add-to-cart-btn" (click)="onAddToCart()">
+        <button class="add-to-cart-btn" (click)="onAddToCart()">
           <i class="fa-solid fa-cart-plus"></i>
-        </div>
+          Add to Cart
+        </button>
       </div>
-    </div>
+    </article>
   </div>
 
   <div class="product__back-link">
     <a [routerLink]="['/']">Back to Home Page</a>
   </div>
-</div>
+</article>
 
 <app-dialog [message]="dialogMessage()" [(show)]="showDialog" />

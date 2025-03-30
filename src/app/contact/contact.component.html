@@ -1,14 +1,14 @@
-<div class="section contact">
-  <div class="heading-1">
+<section class="contact">
+  <h1>
     Want to get in touch?
 
-    <div class="subtitle">We'd love to hear from you!</div>
-  </div>
+    <small>We'd love to hear from you!</small>
+  </h1>
 
-  <div class="section contact__general-info">
-    <div class="heading-2">General Contacts</div>
+  <section class="contact__general-info">
+    <h2>General Contacts</h2>
 
-    <div class="address contact__general-info__address">
+    <address class="contact__general-info__address">
       <div class="item">
         <i class="fa-solid fa-location-dot"></i>
         <span>123 Poster Steet, Art City, ArtistLand</span>
@@ -16,18 +16,20 @@
 
       <div class="item">
         <i class="fa-solid fa-phone"></i>
-        <span> +000 123-456-7890 </span>
+        <a href="tel:+000 123-456-7890"> +000 123-456-7890 </a>
       </div>
 
       <div class="item">
         <i class="fa-solid fa-envelope"></i>
-        <span> hello(at)thetshirtshop.demo </span>
+        <a href="mailto:hello@thetshirtshop.demo">
+          hello(at)thetshirtshop.demo
+        </a>
       </div>
-    </div>
-  </div>
+    </address>
+  </section>
 
-  <div class="section contact__form">
-    <div class="heading-2">Contact Form</div>
+  <section class="contact__form">
+    <h2>Contact Form</h2>
 
     <form #form (ngSubmit)="onSubmit()">
       <div class="form-item">
@@ -65,7 +67,7 @@
 
       <button type="submit">Send Message</button>
     </form>
-  </div>
-</div>
+  </section>
+</section>
 
 <app-dialog message="Thanks for your message!" [(show)]="showDialog" />
