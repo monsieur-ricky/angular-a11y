@@ -1,8 +1,9 @@
 [
     {
         "id": 1,
-        "name": "Minimalist Typography Poster",
-        "description": "Clean, minimalist typography design for modern spaces. Features inspirational quote in elegant sans-serif font on matte paper.",
+        "name": "Misty Forest Path",
+        "description": "A hauntingly beautiful scene of a narrow hiking trail winding through a dense coniferous forest shrouded in thick fog. Tall, slender evergreen trees create a mysterious atmosphere as the path disappears into the mist.",
+        "alternativeText": "A foggy forest scene with tall evergreen trees lining a narrow dirt path that curves through the misty woodland.",
         "price": 18.99,
         "imageUrl": "https://picsum.photos/seed/typography3/800/1000",
         "sizes": [
@@ -13,8 +14,9 @@
     },
     {
         "id": 2,
-        "name": "Botanical Illustration Poster",
-        "description": "Detailed botanical illustration featuring exotic plants and flowers. Scientific accuracy meets artistic beauty in this museum-quality print.",
+        "name": "Lavender Horizon Bridge",
+        "description": "A breathtaking panoramic view of a suspension bridge stretching across calm waters, bathed in mesmerizing lavender and purple hues. The bridge's silhouette creates an elegant architectural line across the horizon, with the water below mirroring the dreamy sky.",
+        "alternativeText": "A suspension bridge spanning across calm waters under a purple-tinted sky, creating a serene and ethereal landscape.",
         "price": 22.99,
         "imageUrl": "https://picsum.photos/seed/botanical5/800/1000",
         "sizes": [
@@ -26,8 +28,9 @@
     },
     {
         "id": 3,
-        "name": "Motivational Quote Poster",
-        "description": "Inspirational quote poster to keep you motivated every day. Bold typography on minimalist background creates strong visual impact.",
+        "name": "Minimalist Workspace",
+        "description": "An elegantly organized dual workspace featuring contrasting aesthetics - one with a dark keyboard and one with a white keyboard. A wooden shelf with decorative items separates the two areas, while coffee cups add a touch of warmth to this clean, productive environment.",
+        "alternativeText": "A minimalist workspace with two computer setups, featuring both dark and white keyboards, decorative items on a wooden shelf, and coffee cups.",
         "price": 17.99,
         "imageUrl": "https://picsum.photos/seed/quote7/800/1000",
         "sizes": [
@@ -38,8 +41,9 @@
     },
     {
         "id": 4,
-        "name": "Cityscape Poster",
-        "description": "Urban cityscape poster featuring iconic skylines. Dramatic perspective captures the energy and architecture of metropolitan life.",
+        "name": "Grizzly Bear Family",
+        "description": "A powerful wildlife scene capturing a mother grizzly bear leading her cubs across a rocky ridge. Set against a backdrop of misty forest and patches of snow, this image showcases the raw beauty of wilderness and the tender bond between a mother and her young.",
+        "alternativeText": "A mother grizzly bear with her cubs walking along a rocky ridge with a forest and snowy landscape in the background.",
         "price": 23.99,
         "imageUrl": "https://picsum.photos/seed/city8/800/1000",
         "sizes": [
@@ -50,8 +54,9 @@
     },
     {
         "id": 5,
-        "name": "Watercolor Ocean Poster",
-        "description": "Delicate watercolor painting of ocean waves and coastal scenery. Soothing blues and aquamarine tones create a tranquil atmosphere.",
+        "name": "Golden Hour Silhouette",
+        "description": "A dreamlike silhouette of a person with flowing hair standing in a sunlit meadow during golden hour. The sun creates a dramatic backlight effect, illuminating the edges of the figure and the surrounding tall grass with warm, golden tones.",
+        "alternativeText": "Silhouette of a person with flowing hair in a meadow at sunset, with golden sunlight creating a dramatic backlight effect.",
         "price": 25.99,
         "imageUrl": "https://picsum.photos/seed/ocean11/800/1000",
         "sizes": [
@@ -62,8 +67,9 @@
     },
     {
         "id": 6,
-        "name": "Vintage Travel Poster",
-        "description": "Classic travel poster inspired by mid-century tourism advertisements. Features stylized destination artwork with retro typography.",
+        "name": "Highland Cow Landscape",
+        "description": "A majestic Highland cow with its distinctive long, reddish-brown fur stands on a rugged coastal landscape. The vintage-toned image captures the animal's unique character against a backdrop of sandy terrain and distant cliffs, evoking the wild beauty of rural Scotland.",
+        "alternativeText": "A Highland cow with long reddish-brown fur standing on rocky coastal terrain with cliffs in the background.",
         "price": 23.99,
         "imageUrl": "https://picsum.photos/seed/travel12/800/1000",
         "sizes": [
