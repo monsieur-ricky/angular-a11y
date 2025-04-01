@@ -14,13 +14,17 @@
       <div>{{ description() }}</div>
 
       <div class="actions">
-        <select name="pets" [(ngModel)]="selectedSize">
-          <option [value]="undefined" selected>Please choose size</option>
+        <div class="select-size">
+          <select name="sizes" [(ngModel)]="selectedSize">
+            <option [value]="undefined" selected>
+              Please choose a size...
+            </option>
 
-          @for (size of sizes() ; track size) {
-          <option [value]="size">{{ size }}</option>
-          }
-        </select>
+            @for (size of sizes() ; track size) {
+            <option [value]="size">{{ size }}</option>
+            }
+          </select>
+        </div>
 
         <div class="add-to-cart-btn" (click)="onAddToCart()">
           <i class="fa-solid fa-cart-plus"></i>
