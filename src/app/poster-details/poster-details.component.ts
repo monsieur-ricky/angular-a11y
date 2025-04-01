@@ -40,6 +40,9 @@ export class PosterDetailsComponent {
   description = computed(
     () => this.productDetailsResource.value()?.description
   );
+  alternativeText = computed(
+    () => this.productDetailsResource.value()?.alternativeText
+  );
   imageUrl = computed(
     () => this.productDetailsResource.value()?.imageUrl ?? 'images/no-image.svg'
   );
