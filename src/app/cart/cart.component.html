@@ -12,7 +12,7 @@
           <th>Price</th>
           <th>Quantity</th>
           <th>Total</th>
-          <th></th>
+          <th style="width: 110px; text-align: center">Actions</th>
         </tr>
       </thead>
       <tbody>
@@ -22,7 +22,7 @@
           <td>{{ item.poster.price | currency : 'EUR' }}</td>
           <td>{{ item.quantity }}</td>
           <td>{{ item.quantity * item.poster.price | currency : 'EUR' }}</td>
-          <td [style.text-align]="'right'">
+          <td>
             <button class="danger" (click)="onDeleteItem(item.poster)">
               Remove
             </button>

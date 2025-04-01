@@ -15,7 +15,8 @@
 
       <div class="actions">
         <div class="select-size">
-          <select name="sizes" [(ngModel)]="selectedSize">
+          <label for="sizes">Select a size:</label>
+          <select id="sizes" name="sizes" [(ngModel)]="selectedSize">
             <option [value]="undefined" selected>
               Please choose a size...
             </option>
