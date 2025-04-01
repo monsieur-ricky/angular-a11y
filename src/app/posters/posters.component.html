@@ -12,7 +12,7 @@
       @for (poster of productsResource.value(); track poster.id) {
       <div class="article posters__list__poster">
         <div class="cover">
-          <img ngSrc="{{ poster.imageUrl }}" fill priority />
+          <img fill priority [ngSrc]="poster.imageUrl" />
         </div>
 
         <div class="heading-3">
@@ -36,3 +36,5 @@
     </div>
   </div>
 </div>
+
+<app-dialog [message]="dialogMessage()" [(show)]="showDialog" />
