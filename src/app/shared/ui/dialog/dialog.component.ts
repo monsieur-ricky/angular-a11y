@@ -14,7 +14,7 @@ import {
     <dialog #dialog>
       <p>{{ message() }}</p>
 
-      <button autofocus (click)="show.set(false)">Close</button>
+      <button (click)="show.set(false)">Close</button>
     </dialog>
   `,
   styles: `
