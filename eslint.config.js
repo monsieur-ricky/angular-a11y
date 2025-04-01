@@ -38,6 +38,17 @@ module.exports = tseslint.config(
       ...angular.configs.templateRecommended,
       ...angular.configs.templateAccessibility
     ],
-    rules: {}
+    rules: {
+      '@angular-eslint/template/alt-text': ['warn'],
+      '@angular-eslint/template/elements-content': ['warn'],
+      '@angular-eslint/template/label-has-associated-control': ['warn'],
+      '@angular-eslint/template/no-positive-tabindex': ['warn'],
+      '@angular-eslint/template/table-scope': ['warn'],
+      '@angular-eslint/template/valid-aria': ['warn'],
+      '@angular-eslint/template/click-events-have-key-events': ['warn'],
+      '@angular-eslint/template/mouse-events-have-key-events': ['warn'],
+      '@angular-eslint/template/no-autofocus': ['warn'],
+      '@angular-eslint/template/no-distracting-elements': ['warn']
+    }
   }
 );
