@@ -1,9 +1,18 @@
-import { Component, computed, input, resource, signal } from '@angular/core';
+import {
+  Component,
+  computed,
+  effect,
+  inject,
+  input,
+  resource,
+  signal
+} from '@angular/core';
 import { Poster } from '../shared/models/product.interface';
 import { CurrencyPipe, NgOptimizedImage } from '@angular/common';
 import { DialogComponent } from '../shared/ui/dialog/dialog.component';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-poster-details',
@@ -18,6 +27,8 @@ import { RouterModule } from '@angular/router';
   styleUrl: './poster-details.component.scss'
 })
 export class PosterDetailsComponent {
+  private readonly title = inject(Title);
+
   id = input<number>();
 
   showDialog = signal(false);
@@ -45,6 +56,10 @@ export class PosterDetailsComponent {
   );
   imageUrl = computed(
     () => this.productDetailsResource.value()?.imageUrl ?? 'images/no-image.svg'
+  );
+
+  titleEffect = effect(() =>
+    this.title.setTitle(`${this.name()} - The Poster Shop`)
   );
 
   onAddToCart(): void {

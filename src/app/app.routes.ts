@@ -9,7 +9,8 @@ export const routes: Routes = [
   {
     path: 'posters',
     loadComponent: () =>
-      import('./posters/posters.component').then((m) => m.PostersComponent)
+      import('./posters/posters.component').then((m) => m.PostersComponent),
+    title: 'Posters - The Poster Shop'
   },
   {
     path: 'posters/:id',
@@ -21,11 +22,13 @@ export const routes: Routes = [
   {
     path: 'contact',
     loadComponent: () =>
-      import('./contact/contact.component').then((m) => m.ContactComponent)
+      import('./contact/contact.component').then((m) => m.ContactComponent),
+    title: 'Contacts - The Poster Shop'
   },
   {
     path: 'cart',
     loadComponent: () =>
-      import('./cart/cart.component').then((m) => m.CartComponent)
+      import('./cart/cart.component').then((m) => m.CartComponent),
+    title: 'Shopping Cart - The Poster Shop'
   }
 ];
