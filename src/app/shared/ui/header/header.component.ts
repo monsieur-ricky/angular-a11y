@@ -15,16 +15,29 @@ import { RouterModule } from '@angular/router';
             <a
               routerLink="/posters"
               routerLinkActive="active"
+              ariaCurrentWhenActive="page"
               [routerLinkActiveOptions]="{ exact: true }"
             >
               Posters
             </a>
           </li>
           <li>
-            <a routerLink="/contact" routerLinkActive="active">Contacts</a>
+            <a
+              routerLink="/contact"
+              routerLinkActive="active"
+              ariaCurrentWhenActive="page"
+            >
+              Contacts
+            </a>
           </li>
           <li>
-            <a routerLink="/cart" routerLinkActive="active" class="cart">
+            <a
+              routerLink="/cart"
+              routerLinkActive="active"
+              ariaCurrentWhenActive="page"
+            >
+              Cart ({{ count() }})
+            <a routerLink="/cart" routerLinkActive="active" ariaCurrentWhenActive="page" class="cart">
               Cart
               <span>{{ count() }}</span>
             </a>
