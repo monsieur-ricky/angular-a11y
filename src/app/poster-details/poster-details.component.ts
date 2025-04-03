@@ -13,6 +13,7 @@ import { DialogComponent } from '../shared/ui/dialog/dialog.component';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { Title } from '@angular/platform-browser';
+import { A11yModule } from '@angular/cdk/a11y';
 
 @Component({
   selector: 'app-poster-details',
@@ -21,6 +22,8 @@ import { Title } from '@angular/platform-browser';
     RouterModule,
     CurrencyPipe,
     NgOptimizedImage,
+    A11yModule,
+
     DialogComponent
   ],
   templateUrl: './poster-details.component.html',

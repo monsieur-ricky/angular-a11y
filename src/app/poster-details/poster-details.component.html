@@ -1,6 +1,9 @@
-<article class="product">
-  <h1>
+@if (name()) {
+<article class="product" cdkTrapFocus [cdkTrapFocusAutoCapture]="true">
+  <h1 cdkFocusInitial tabindex="-1">
     {{ name() }}
+
+    <span aria-label="poster details page"></span>
   </h1>
 
   <div class="product__container">
@@ -47,5 +50,6 @@
     <a [routerLink]="['/']">Back to Home Page</a>
   </div>
 </article>
+}
 
 <app-dialog [message]="dialogMessage()" [(show)]="showDialog" />

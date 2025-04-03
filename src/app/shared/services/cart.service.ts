@@ -1,5 +1,6 @@
-import { Injectable, signal } from '@angular/core';
+import { inject, Injectable, signal } from '@angular/core';
 import { Poster } from '../models/product.interface';
+import { LiveAnnouncer } from '@angular/cdk/a11y';
 
 export interface CartItem {
   poster: Poster;
@@ -15,6 +16,7 @@ export interface Cart {
   providedIn: 'root'
 })
 export class CartService {
+  private readonly liveAnnouncer = inject(LiveAnnouncer);
   private readonly dummyCartItems: CartItem[] = [
     {
       poster: {
@@ -77,6 +79,9 @@ export class CartService {
 
       return { items: items?.items || [], total: total ?? 0 };
     });
+
+    const message = `Removed ${item.name} from cart`;
+    this.liveAnnouncer.announce(message, 'assertive');
   }
 
   clearCart(): void {

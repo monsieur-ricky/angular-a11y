@@ -35,9 +35,8 @@ import { RouterModule } from '@angular/router';
               routerLink="/cart"
               routerLinkActive="active"
               ariaCurrentWhenActive="page"
+              class="cart"
             >
-              Cart ({{ count() }})
-            <a routerLink="/cart" routerLinkActive="active" ariaCurrentWhenActive="page" class="cart">
               Cart
 
               <span aria-hidden="true">
