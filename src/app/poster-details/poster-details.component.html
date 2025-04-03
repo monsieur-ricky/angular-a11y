@@ -9,7 +9,9 @@
     </div>
 
     <article class="product__container__details">
-      <h2>{{ price() | currency : 'EUR' }}</h2>
+      @let _price = price() | currency : 'EUR';
+
+      <h2 [attr.aria-label]="`Price ${_price}`">{{ _price }}</h2>
 
       <p>{{ description() }}</p>
 
@@ -22,12 +24,18 @@
             </option>
 
             @for (size of sizes() ; track size) {
-            <option [value]="size">{{ size }}</option>
+            <option [value]="size" [attr.aria-label]="`Size ${size}`">
+              {{ size }}
+            </option>
             }
           </select>
         </div>
 
-        <button class="add-to-cart-btn" (click)="onAddToCart()">
+        <button
+          class="add-to-cart-btn"
+          (click)="onAddToCart()"
+          [attr.aria-label]="`Add ${name()} poster to cart`"
+        >
           <i class="fa-solid fa-cart-plus"></i>
           Add to Cart
         </button>

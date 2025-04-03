@@ -25,6 +25,8 @@
           <td>
             <button class="danger" (click)="onDeleteItem(item.poster)">
               Remove
+
+              <span [attr.aria-label]="item.poster.name"></span>
             </button>
           </td>
         </tr>

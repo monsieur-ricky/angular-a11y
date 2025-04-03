@@ -20,21 +20,32 @@
           />
         </div>
 
-        <h3>
-          {{ poster.price | currency : 'EUR' }}
+        @let price = poster.price | currency : 'EUR';
+
+        <h3 [attr.aria-label]="`Price ${price}`">
+          {{ price }}
         </h3>
 
-        <h4>{{ poster.name }}</h4>
+        @let name = poster.name;
 
-        <p class="description">{{ poster.description }}</p>
+        <h4 [attr.aria-label]="`${name} poster`">{{ name }}</h4>
+
+        <p class="description" aria-hidden="true">{{ poster.description }}</p>
 
         <div class="actions">
-          <a [routerLink]="['/posters', poster.id]">
+          <a
+            [routerLink]="['/posters', poster.id]"
+            [attr.aria-label]="`See ${name} poster details`"
+          >
             <i class="fa-solid fa-circle-info"></i>
             See Details
           </a>
 
-          <button class="add-to-cart-btn" (click)="addToCart(poster)">
+          <button
+            class="add-to-cart-btn"
+            (click)="addToCart(poster)"
+            [attr.aria-label]="`Add ${name} poster to cart`"
+          >
             <i class="fa-solid fa-cart-plus"></i>
             Add to Cart
           </button>

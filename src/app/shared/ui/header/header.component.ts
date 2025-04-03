@@ -39,7 +39,12 @@ import { RouterModule } from '@angular/router';
               Cart ({{ count() }})
             <a routerLink="/cart" routerLinkActive="active" ariaCurrentWhenActive="page" class="cart">
               Cart
-              <span>{{ count() }}</span>
+
+              <span aria-hidden="true">
+                {{ count() }}
+              </span>
+
+              <span class="sr-only"> with {{ count() }} items </span>
             </a>
           </li>
         </ul>
