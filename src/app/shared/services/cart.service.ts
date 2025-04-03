@@ -15,7 +15,37 @@ export interface Cart {
   providedIn: 'root'
 })
 export class CartService {
-  private readonly cart = signal<Cart>({ items: [], total: 0 });
+  private readonly dummyCartItems: CartItem[] = [
+    {
+      poster: {
+        id: 1,
+        name: 'Misty Forest Path',
+        description: '',
+        alternativeText: '',
+        price: 18.99,
+        imageUrl: '',
+        sizes: []
+      },
+      quantity: 2
+    },
+    {
+      poster: {
+        id: 2,
+        name: 'Lavender Horizon Bridge',
+        description: '',
+        alternativeText: '',
+        price: 22.99,
+        imageUrl: '',
+        sizes: []
+      },
+      quantity: 1
+    }
+  ];
+
+  private readonly cart = signal<Cart>({
+    items: [...this.dummyCartItems],
+    total: 60.97
+  });
 
   readonly shoppingCart = this.cart.asReadonly();
 
