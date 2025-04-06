@@ -24,9 +24,10 @@ import { RouterModule } from '@angular/router';
             <a routerLink="/contact" routerLinkActive="active">Contacts</a>
           </li>
           <li>
-            <a routerLink="/cart" routerLinkActive="active"
-              >Cart ({{ count() }})</a
-            >
+            <a routerLink="/cart" routerLinkActive="active" class="cart">
+              Cart
+              <span>{{ count() }}</span>
+            </a>
           </li>
         </ul>
       </div>
@@ -50,11 +51,11 @@ import { RouterModule } from '@angular/router';
           list-style: none;
           padding: 0;
           margin: 0;
-          
+
           li {
             display: inline-block;
 
-            a {              
+            a {
               display: block;
               padding: 0.35rem 1rem;
               color: #ffffff;
@@ -64,11 +65,31 @@ import { RouterModule } from '@angular/router';
               &:is(:hover, .active) {
                 background-color: var(--primary-color-dark);
               }
+
+              &.cart {
+                position: relative;
+
+                span {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  font-size: 0.8rem;
+                  font-weight: 500;
+                  background: rgb(165, 0, 0);
+                  width: 20px;
+                  height: 20px;
+                  border-radius: 50%;
+                  position: absolute;
+                  top: -5px;
+                  right: -5px;
+                  line-height: 2;
+                }
+              }
             }
           }
         }
       }
-    }    
+    }
   `
 })
 export class HeaderComponent {
